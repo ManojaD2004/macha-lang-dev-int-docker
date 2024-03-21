@@ -4,11 +4,20 @@ import { useRouter } from "next/navigation";
 import { TypeAnimation } from "react-type-animation";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Pagination, Navigation } from "swiper/modules";
-
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
-import { Image } from "@nextui-org/react";
+// import { ToastContainer, toast } from "react-toast";
+
+// const ToastComp = () => {
+//   const wave = () => toast("Hi there 👋");
+//   return (
+//     <div>
+//       <button onClick={wave}>Say hi!</button>
+//       <ToastContainer />
+//     </div>
+//   );
+// };
 
 const Hero = () => {
   let router = useRouter();
@@ -27,6 +36,7 @@ const Hero = () => {
   });
   return (
     <div className="text-black pt-[60px] ">
+      {/* <ToastComp /> */}
       <div
         className="w-full h-[500px] bg-[#282A35!important] 
         flex items-center justify-center flex-col gap-[30px]"
