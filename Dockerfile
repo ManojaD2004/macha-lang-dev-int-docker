@@ -25,25 +25,15 @@ COPY . /home/macha-lang
 
 WORKDIR /home/macha-lang/client
 
-RUN npm i
-
-RUN npm run build
+RUN npm install
 
 WORKDIR /home/macha-lang/server
 
-RUN mkdir build
+RUN npm install
 
-RUN mkdir logs
+RUN npm install -g rollup
 
-RUN npm i
-
-RUN npm i -g rollup
-
-RUN npm i -g nodemon
-
-COPY ./.env.local /home/macha-lang/client/
-
-COPY ./start.sh /home/macha-lang
+RUN npm install -g nodemon
 
 WORKDIR /home/macha-lang
 
