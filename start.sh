@@ -8,4 +8,4 @@ cd ./server && npm run start
 
 wait
 
-echo "Both of them have executed."
+echo "Both of them have executed and exited."
