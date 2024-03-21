@@ -2,4 +2,4 @@
 
 echo "Building Docker Image"
 
-docker build -t my-macha-lang-image-dev ./Dockerfile.prod
+docker build -t my-macha-lang-image-dev ./
