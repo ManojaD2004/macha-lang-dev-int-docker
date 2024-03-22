@@ -1,0 +1,7 @@
+FROM node:lts-alpine3.19
+
+RUN mkdir client
+
+WORKDIR /client
+
+CMD [ "/bin/sh", "-c", "npm install && npm run dev" ]
