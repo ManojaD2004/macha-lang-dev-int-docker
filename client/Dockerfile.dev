@@ -1,5 +1,9 @@
 FROM node:lts-alpine3.19
 
+RUN apk add --no-cache libc6-compat
+
+RUN npm install -g npm@latest
+
 RUN mkdir client
 
 WORKDIR /client
