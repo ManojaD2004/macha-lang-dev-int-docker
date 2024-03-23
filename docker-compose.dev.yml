@@ -3,17 +3,19 @@ services:
   next-client:
     build:
       context: ./client
-      dockerfile: Dockerfile
+      dockerfile: Dockerfile.dev
     ports:
       - 3000:3000
-    environment:
-      - AWS_ML_SERVER_API=http://localhost:8080
-  
+    volumes:
+      - ./client:/client
+
   node-server:
     build:
       context: ./server
-      dockerfile: Dockerfile
+      dockerfile: Dockerfile.dev
     ports:
       - 8080:8080
+    volumes:
+      - ./server:/server
 
 

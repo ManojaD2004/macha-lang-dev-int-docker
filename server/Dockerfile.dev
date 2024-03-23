@@ -1,0 +1,11 @@
+FROM node:lts-alpine3.19
+
+RUN mkdir server
+
+RUN npm install -g nodemon
+
+RUN npm install -g rollup
+
+WORKDIR /server
+
+CMD [ "/bin/sh", "-c", "npm install && npm run dev" ]
