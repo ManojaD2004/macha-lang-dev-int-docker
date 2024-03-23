@@ -1,6 +1,7 @@
 version: "2.24.5"
 services:
   next-client:
+    image: next-client-v1
     build:
       context: ./client
       dockerfile: Dockerfile
@@ -10,6 +11,7 @@ services:
       - AWS_ML_SERVER_API=http://localhost:8080
   
   node-server:
+    image: node-server-v1
     build:
       context: ./server
       dockerfile: Dockerfile
