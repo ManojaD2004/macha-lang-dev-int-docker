@@ -9,6 +9,7 @@ services:
       - 3000:3000
     environment:
       - AWS_ML_SERVER_API=http://localhost:8080
+    restart: always
   
   node-server:
     image: node-server-v1
@@ -17,5 +18,6 @@ services:
       dockerfile: Dockerfile
     ports:
       - 8080:8080
+    restart: always
 
 

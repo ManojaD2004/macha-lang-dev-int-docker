@@ -1,4 +1,4 @@
-version: "2.24.5"
+version: "3.8"
 services:
   next-client:
     build:
@@ -9,6 +9,7 @@ services:
     volumes:
       - ./client:/client
     image: next-client-dev-v1
+    restart: unless-stopped
 
   node-server:
     build:
@@ -19,5 +20,6 @@ services:
     volumes:
       - ./server:/server
     image: node-server-dev-v1
+    restart: unless-stopped
 
 
